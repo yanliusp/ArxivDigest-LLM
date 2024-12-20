@@ -2,7 +2,7 @@
 run:
 python -m relevancy run_all_day_paper \
   --output_dir ./data \
-  --model_name="gpt-3.5-turbo-16k" \
+  --model_name="gpt-3.5-turbo" \
 """
 import time
 import json
@@ -90,7 +90,7 @@ def process_subject_fields(subjects):
 def generate_relevance_score(
     all_papers,
     query,
-    model_name="gpt-3.5-turbo-16k",
+    model_name="gpt-3.5-turbo",
     threshold_score=8,
     num_paper_in_prompt=4,
     temperature=0.4,
@@ -139,7 +139,7 @@ def run_all_day_paper(
     query={"interest":"", "subjects":["Computation and Language", "Artificial Intelligence"]},
     date=None,
     data_dir="../data",
-    model_name="gpt-3.5-turbo-16k",
+    model_name="gpt-3.5-turbo",
     threshold_score=8,
     num_paper_in_prompt=8,
     temperature=0.4,
